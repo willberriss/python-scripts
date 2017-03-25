@@ -1,9 +1,8 @@
 #! /usr/bin/env python
 
-from glob import glob
-from os import rename
+import glob, os
 
-for fname in glob('*txt*'):
+for fname in glob.glob('*txt*'):
     # Replace all occurrences of txt with md
-    rename(fname, fname.replace('txt', 'md'))
+    os.rename(fname, fname.replace('txt', 'md'))
 
